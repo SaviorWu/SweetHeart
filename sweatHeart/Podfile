@@ -1,0 +1,33 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'sweatHeart' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for sweatHeart
+  pod 'MJRefresh'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'MBProgressHUD'
+  pod 'IQKeyboardManager'
+  pod 'Masonry'
+  pod 'MJExtension'
+  pod 'AFNetworking', '~> 3.0'
+  pod "VTMagic"
+  
+  pod 'CYLTabBarController', '~> 1.17.22'
+  pod 'JXCategoryView'
+  pod 'JXPagingView/Pager'
+  pod 'YYKit'
+  pod 'MJRefresh'
+  pod 'HXPhotoPicker', '~> 2.1.9'
+  target 'sweatHeartTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'sweatHeartUITests' do
+    # Pods for testing
+  end
+
+end

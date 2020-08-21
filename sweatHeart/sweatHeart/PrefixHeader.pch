@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  sweatHeart
+//
+//  Created by 。。。。 on 2020/8/21.
+//  Copyright © 2020 FriendWu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "IQKeyboardManager.h"
+#import <YYKit/YYKit.h>
+#import <VTMagic/VTMagic.h>
+#import <JXCategoryView/JXCategoryView.h>
+#import <JXPagingView/JXPagerView.h>
+#import "BaseViewController.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFHTTPSessionManager.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "Marco.h"
+#import "UINavigationController+pushAnimotion.h"
+#import "UIButton+HXExtension.h"
+#import "NetworkRequest.h"
+#import "UserInfo.h"
+#endif /* PrefixHeader_pch */
