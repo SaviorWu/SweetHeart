@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PublicTool : NSObject
 + (PublicTool*)sharedInstance;
 + (NSString*)checkTextFeild:(UITextField*)tf;
++ (BOOL)judgePassWord:(NSString *)pass;
 @end
 
 NS_ASSUME_NONNULL_END

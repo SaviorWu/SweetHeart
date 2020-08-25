@@ -10,18 +10,27 @@
 #import "HomePageViewController.h"
 #import "PersonalCenterViewController.h"
 #import "RegistViewController.h"
+#import "MessageViewController.h"
+#import "OrderViewController.h"
 @implementation MyTabbar
 - (CYLTabBarController *)tabBarController {
     if (_tabBarController == nil) {
         HomePageViewController * homePageViewController = [[HomePageViewController alloc] init];
         UINavigationController * homePageNavigationController = [[UINavigationController alloc] initWithRootViewController:homePageViewController];
         
+        MessageViewController * messagePageViewController = [[MessageViewController alloc] init];
+        UINavigationController * messageNavigationController = [[UINavigationController alloc] initWithRootViewController:messagePageViewController];
+        
+        OrderViewController * orderViewController = [[OrderViewController alloc] init];
+        UINavigationController * orderNavigationController = [[UINavigationController alloc] initWithRootViewController:orderViewController];
         
         PersonalCenterViewController * personalCenterViewController = [[PersonalCenterViewController alloc] init];
         UINavigationController * personalCenterNavigationController = [[UINavigationController alloc] initWithRootViewController:personalCenterViewController];
         
         NSArray * tabBarItemsAttributes = [self tabBarItemsAttributes];
         NSArray * viewControllers       = @[homePageNavigationController,
+                                            messageNavigationController,
+                                            orderNavigationController,
                                             personalCenterNavigationController];
         
         CYLTabBarController * tabBarController = [[CYLTabBarController alloc] init];
@@ -37,18 +46,29 @@
 
 
 - (NSArray *)tabBarItemsAttributes {
-    NSDictionary * tabBarItem1Attribute = @{
-                                            CYLTabBarItemTitle : NSLocalizedString(@"首页", nil),
+    NSDictionary * tabBarItem1Attribute = @{CYLTabBarItemTitle : @"首页",
                                             CYLTabBarItemImage : @"tab_home_n_icon",
                                             CYLTabBarItemSelectedImage : @"tab_home_s_icon",
-                                            };
-    NSDictionary * tabBarItem5Attribute = @{
-                                            CYLTabBarItemTitle : NSLocalizedString(@"个人中心",nil),
-                                            CYLTabBarItemImage : @"tab_mypage_n_icon",
-                                            CYLTabBarItemSelectedImage : @"tab_mypage_s_icon"
-                                            };
+    };
+    NSDictionary * tabBarItem2Attribute = @{
+        CYLTabBarItemTitle : @"消息",
+        CYLTabBarItemImage : @"tab_mypage_n_icon",
+        CYLTabBarItemSelectedImage : @"tab_mypage_s_icon"
+    };
+    NSDictionary * tabBarItem3Attribute = @{
+        CYLTabBarItemTitle : @"订单",
+        CYLTabBarItemImage : @"tab_mypage_n_icon",
+        CYLTabBarItemSelectedImage : @"tab_mypage_s_icon"
+    };
+    NSDictionary * tabBarItem4Attribute = @{
+        CYLTabBarItemTitle : @"我的",
+        CYLTabBarItemImage : @"tab_mypage_n_icon",
+        CYLTabBarItemSelectedImage : @"tab_mypage_s_icon"
+    };
     NSArray * tarBarItemsAttrbutes = @[tabBarItem1Attribute,
-                                       tabBarItem5Attribute];
+                                       tabBarItem2Attribute,
+                                       tabBarItem3Attribute,
+                                       tabBarItem4Attribute];
     
     return tarBarItemsAttrbutes;
 }

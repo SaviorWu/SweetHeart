@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MyTabbar.h"
 #import "Marco.h"
+#import "LoginViewController.h"
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -18,7 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self showHomePage];
+    LoginViewController* login = [[LoginViewController alloc] init];
+    UINavigationController * homePageNavigationController = [[UINavigationController alloc] initWithRootViewController:login];
+    
+    self.window.rootViewController = homePageNavigationController;
+//    [self showHomePage];
     [self configIQKeyboard];
     return YES;
 }
@@ -26,7 +31,6 @@
     MyTabbar * TabBarControllerConfig = [[MyTabbar alloc] init];
     TabBarControllerConfig.tabBarController.delegate = self;
     self.window.rootViewController = TabBarControllerConfig.tabBarController;
-
 }
 - (void)configIQKeyboard
 {

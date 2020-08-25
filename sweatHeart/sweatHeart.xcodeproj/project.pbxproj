@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		8CE7F2F7EDBFAB41D2FFC395 /* Pods_sweatHeart_sweatHeartUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABC4CFEEA5DADA4C3C37147 /* Pods_sweatHeart_sweatHeartUITests.framework */; };
+		A25542F224F4A12B0012C406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25542F124F4A12B0012C406 /* Main.storyboard */; };
+		A25542FA24F4A2F40012C406 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25542F824F4A2F40012C406 /* OrderViewController.m */; };
+		A25542FB24F4A2F40012C406 /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25542F924F4A2F40012C406 /* OrderViewController.xib */; };
+		A25542FF24F4A3060012C406 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25542FD24F4A3060012C406 /* MessageViewController.m */; };
+		A255430024F4A3060012C406 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25542FE24F4A3060012C406 /* MessageViewController.xib */; };
+		A255430524F4A4900012C406 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A255430324F4A4900012C406 /* LoginViewController.m */; };
+		A255430624F4A4900012C406 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A255430424F4A4900012C406 /* LoginViewController.xib */; };
+		A255430B24F4B3070012C406 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A255430924F4B3070012C406 /* ForgetPasswordViewController.m */; };
+		A255430C24F4B3070012C406 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A255430A24F4B3070012C406 /* ForgetPasswordViewController.xib */; };
+		A255431024F4E45C0012C406 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A255430E24F4E45C0012C406 /* UIViewController+HUD.m */; };
+		A255431524F4F3910012C406 /* MatchingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A255431324F4F3910012C406 /* MatchingCollectionViewCell.m */; };
+		A255431624F4F3910012C406 /* MatchingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A255431424F4F3910012C406 /* MatchingCollectionViewCell.xib */; };
+		A255431E24F4FAB60012C406 /* UICollectionView+Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A255431824F4FAB60012C406 /* UICollectionView+Cell.m */; };
+		A255431F24F4FAB60012C406 /* MZTableView+Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A255431C24F4FAB60012C406 /* MZTableView+Cell.m */; };
+		A255432024F4FAB60012C406 /* UITableView+RefreshStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A255431D24F4FAB60012C406 /* UITableView+RefreshStatus.m */; };
+		A255432924F5021D0012C406 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A255432724F5021D0012C406 /* HeaderCollectionReusableView.m */; };
+		A255432A24F5021D0012C406 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A255432824F5021D0012C406 /* HeaderCollectionReusableView.xib */; };
+		A255432E24F507D40012C406 /* StartMatchingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A255432C24F507D40012C406 /* StartMatchingCollectionViewCell.m */; };
+		A255432F24F507D40012C406 /* StartMatchingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A255432D24F507D40012C406 /* StartMatchingCollectionViewCell.xib */; };
 		A2597FA624EF5DAD00878A99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2597FA524EF5DAD00878A99 /* AppDelegate.m */; };
 		A2597FB124EF5DAE00878A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2597FB024EF5DAE00878A99 /* Assets.xcassets */; };
 		A2597FB424EF5DAE00878A99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2597FB224EF5DAE00878A99 /* LaunchScreen.storyboard */; };
@@ -77,6 +96,36 @@
 		6B8AE50CCB43C9FD2E0B8826 /* Pods_sweatHeart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sweatHeart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F378E456CB6CF05371D642B /* Pods-sweatHeart-sweatHeartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sweatHeart-sweatHeartUITests.release.xcconfig"; path = "Target Support Files/Pods-sweatHeart-sweatHeartUITests/Pods-sweatHeart-sweatHeartUITests.release.xcconfig"; sourceTree = "<group>"; };
 		761505991779E9113C398DCA /* Pods-sweatHeartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sweatHeartTests.debug.xcconfig"; path = "Target Support Files/Pods-sweatHeartTests/Pods-sweatHeartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A25542F124F4A12B0012C406 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A25542F724F4A2F40012C406 /* OrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		A25542F824F4A2F40012C406 /* OrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		A25542F924F4A2F40012C406 /* OrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderViewController.xib; sourceTree = "<group>"; };
+		A25542FC24F4A3060012C406 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		A25542FD24F4A3060012C406 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		A25542FE24F4A3060012C406 /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		A255430224F4A4900012C406 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A255430324F4A4900012C406 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A255430424F4A4900012C406 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A255430824F4B3070012C406 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		A255430924F4B3070012C406 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		A255430A24F4B3070012C406 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		A255430E24F4E45C0012C406 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		A255430F24F4E45C0012C406 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		A255431224F4F3910012C406 /* MatchingCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchingCollectionViewCell.h; sourceTree = "<group>"; };
+		A255431324F4F3910012C406 /* MatchingCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchingCollectionViewCell.m; sourceTree = "<group>"; };
+		A255431424F4F3910012C406 /* MatchingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchingCollectionViewCell.xib; sourceTree = "<group>"; };
+		A255431824F4FAB60012C406 /* UICollectionView+Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Cell.m"; sourceTree = "<group>"; };
+		A255431924F4FAB60012C406 /* UITableView+RefreshStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+RefreshStatus.h"; sourceTree = "<group>"; };
+		A255431A24F4FAB60012C406 /* MZTableView+Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MZTableView+Cell.h"; sourceTree = "<group>"; };
+		A255431B24F4FAB60012C406 /* UICollectionView+Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Cell.h"; sourceTree = "<group>"; };
+		A255431C24F4FAB60012C406 /* MZTableView+Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MZTableView+Cell.m"; sourceTree = "<group>"; };
+		A255431D24F4FAB60012C406 /* UITableView+RefreshStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+RefreshStatus.m"; sourceTree = "<group>"; };
+		A255432624F5021D0012C406 /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		A255432724F5021D0012C406 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		A255432824F5021D0012C406 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		A255432B24F507D40012C406 /* StartMatchingCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartMatchingCollectionViewCell.h; sourceTree = "<group>"; };
+		A255432C24F507D40012C406 /* StartMatchingCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartMatchingCollectionViewCell.m; sourceTree = "<group>"; };
+		A255432D24F507D40012C406 /* StartMatchingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartMatchingCollectionViewCell.xib; sourceTree = "<group>"; };
 		A2597FA124EF5DAD00878A99 /* sweatHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sweatHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2597FA424EF5DAD00878A99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2597FA524EF5DAD00878A99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -212,6 +261,101 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A25542F324F4A2C90012C406 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A25542F524F4A2D70012C406 /* Controller */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		A25542F424F4A2D10012C406 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				A25542F624F4A2DE0012C406 /* Controller */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		A25542F524F4A2D70012C406 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A25542FC24F4A3060012C406 /* MessageViewController.h */,
+				A25542FD24F4A3060012C406 /* MessageViewController.m */,
+				A25542FE24F4A3060012C406 /* MessageViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A25542F624F4A2DE0012C406 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A25542F724F4A2F40012C406 /* OrderViewController.h */,
+				A25542F824F4A2F40012C406 /* OrderViewController.m */,
+				A25542F924F4A2F40012C406 /* OrderViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A255430124F4A47F0012C406 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A255430224F4A4900012C406 /* LoginViewController.h */,
+				A255430324F4A4900012C406 /* LoginViewController.m */,
+				A255430424F4A4900012C406 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A255430724F4B2EF0012C406 /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				A255430824F4B3070012C406 /* ForgetPasswordViewController.h */,
+				A255430924F4B3070012C406 /* ForgetPasswordViewController.m */,
+				A255430A24F4B3070012C406 /* ForgetPasswordViewController.xib */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		A255430D24F4E45C0012C406 /* UIViewController+Hub */ = {
+			isa = PBXGroup;
+			children = (
+				A255430E24F4E45C0012C406 /* UIViewController+HUD.m */,
+				A255430F24F4E45C0012C406 /* UIViewController+HUD.h */,
+			);
+			path = "UIViewController+Hub";
+			sourceTree = "<group>";
+		};
+		A255431124F4F33C0012C406 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A255431224F4F3910012C406 /* MatchingCollectionViewCell.h */,
+				A255431324F4F3910012C406 /* MatchingCollectionViewCell.m */,
+				A255431424F4F3910012C406 /* MatchingCollectionViewCell.xib */,
+				A255432624F5021D0012C406 /* HeaderCollectionReusableView.h */,
+				A255432724F5021D0012C406 /* HeaderCollectionReusableView.m */,
+				A255432824F5021D0012C406 /* HeaderCollectionReusableView.xib */,
+				A255432B24F507D40012C406 /* StartMatchingCollectionViewCell.h */,
+				A255432C24F507D40012C406 /* StartMatchingCollectionViewCell.m */,
+				A255432D24F507D40012C406 /* StartMatchingCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A255431724F4FAB60012C406 /* XSFTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A255431824F4FAB60012C406 /* UICollectionView+Cell.m */,
+				A255431924F4FAB60012C406 /* UITableView+RefreshStatus.h */,
+				A255431A24F4FAB60012C406 /* MZTableView+Cell.h */,
+				A255431B24F4FAB60012C406 /* UICollectionView+Cell.h */,
+				A255431C24F4FAB60012C406 /* MZTableView+Cell.m */,
+				A255431D24F4FAB60012C406 /* UITableView+RefreshStatus.m */,
+			);
+			name = XSFTableView;
+			path = ../../../../ALD/ALD/Tools/XSFTableView;
+			sourceTree = "<group>";
+		};
 		A2597F9824EF5DAD00878A99 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +392,7 @@
 				A2597FB624EF5DAE00878A99 /* main.m */,
 				A2597FE924EF5F6900878A99 /* Marco.h */,
 				A2597FFF24EF613000878A99 /* PrefixHeader.pch */,
+				A25542F124F4A12B0012C406 /* Main.storyboard */,
 			);
 			path = sweatHeart;
 			sourceTree = "<group>";
@@ -314,6 +459,10 @@
 		A2597FEA24EF5FE300878A99 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				A255430724F4B2EF0012C406 /* ForgetPassword */,
+				A255430124F4A47F0012C406 /* Login */,
+				A25542F424F4A2D10012C406 /* Order */,
+				A25542F324F4A2C90012C406 /* Message */,
 				A2597FF924EF604C00878A99 /* RegistLogin */,
 				A2597FF224EF602C00878A99 /* Personal */,
 				A2597FEB24EF5FF100878A99 /* HomePage */,
@@ -324,6 +473,7 @@
 		A2597FEB24EF5FF100878A99 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				A255431124F4F33C0012C406 /* View */,
 				A2597FEC24EF5FF800878A99 /* Controller */,
 			);
 			path = HomePage;
@@ -392,6 +542,8 @@
 		A259800E24EF6B6200878A99 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A255431724F4FAB60012C406 /* XSFTableView */,
+				A255430D24F4E45C0012C406 /* UIViewController+Hub */,
 				A259800F24EF6B6200878A99 /* UIImageView+Loadding */,
 				A259801224EF6B6200878A99 /* HQFlowView */,
 				A259801C24EF6B6200878A99 /* XSFTableView */,
@@ -640,11 +792,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25542FB24F4A2F40012C406 /* OrderViewController.xib in Resources */,
+				A255431624F4F3910012C406 /* MatchingCollectionViewCell.xib in Resources */,
 				A2597FF124EF600E00878A99 /* HomePageViewController.xib in Resources */,
 				A2597FB424EF5DAE00878A99 /* LaunchScreen.storyboard in Resources */,
+				A255432F24F507D40012C406 /* StartMatchingCollectionViewCell.xib in Resources */,
 				A2597FB124EF5DAE00878A99 /* Assets.xcassets in Resources */,
+				A25542F224F4A12B0012C406 /* Main.storyboard in Resources */,
 				A2597FFE24EF605A00878A99 /* RegistViewController.xib in Resources */,
+				A255430C24F4B3070012C406 /* ForgetPasswordViewController.xib in Resources */,
+				A255432A24F5021D0012C406 /* HeaderCollectionReusableView.xib in Resources */,
+				A255430024F4A3060012C406 /* MessageViewController.xib in Resources */,
 				A2597FF824EF604100878A99 /* PersonalCenterViewController.xib in Resources */,
+				A255430624F4A4900012C406 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,16 +934,23 @@
 			files = (
 				A259805624EF6B6200878A99 /* NSBundle+JTHelper.m in Sources */,
 				A259800724EF6AC100878A99 /* NetWorkResponseModel.m in Sources */,
+				A255432924F5021D0012C406 /* HeaderCollectionReusableView.m in Sources */,
 				A259804924EF6B6200878A99 /* ImageView+Loading.m in Sources */,
+				A25542FA24F4A2F40012C406 /* OrderViewController.m in Sources */,
 				A259800924EF6AC100878A99 /* HTTPSessionManager.m in Sources */,
 				A259805224EF6B6200878A99 /* UIViewController+PopAnimated.m in Sources */,
+				A25542FF24F4A3060012C406 /* MessageViewController.m in Sources */,
+				A255431524F4F3910012C406 /* MatchingCollectionViewCell.m in Sources */,
 				A259805524EF6B6200878A99 /* JTLanguageHelper.m in Sources */,
 				A259805024EF6B6200878A99 /* UITableView+RefreshStatus.m in Sources */,
+				A255431E24F4FAB60012C406 /* UICollectionView+Cell.m in Sources */,
+				A255432E24F507D40012C406 /* StartMatchingCollectionViewCell.m in Sources */,
 				A259804C24EF6B6200878A99 /* HQImagePageControl.m in Sources */,
 				A2597FE324EF5F4700878A99 /* CYLPlusButtonSubclass.m in Sources */,
 				A2597FF024EF600E00878A99 /* HomePageViewController.m in Sources */,
 				A2597FF724EF604100878A99 /* PersonalCenterViewController.m in Sources */,
 				A259804A24EF6B6200878A99 /* HQFlowView.m in Sources */,
+				A255431F24F4FAB60012C406 /* MZTableView+Cell.m in Sources */,
 				A259805424EF6B6200878A99 /* LHCustomModalTransition.m in Sources */,
 				A2597FE424EF5F4700878A99 /* MyTabbar.m in Sources */,
 				A259805324EF6B6200878A99 /* PopViewController.m in Sources */,
@@ -791,8 +958,11 @@
 				A2597FDD24EF5F4100878A99 /* BaseViewController.m in Sources */,
 				A2597FFD24EF605A00878A99 /* RegistViewController.m in Sources */,
 				A259805124EF6B6200878A99 /* UIButton+LargeArea.m in Sources */,
+				A255430B24F4B3070012C406 /* ForgetPasswordViewController.m in Sources */,
+				A255432024F4FAB60012C406 /* UITableView+RefreshStatus.m in Sources */,
 				A259805B24EF6B6200878A99 /* UIImage+Bitmap.m in Sources */,
 				A259805C24EF6B6200878A99 /* KGModal.m in Sources */,
+				A255431024F4E45C0012C406 /* UIViewController+HUD.m in Sources */,
 				A259805924EF6B6200878A99 /* PublicTool.m in Sources */,
 				A259805D24EF6B6200878A99 /* XSFAlertView.m in Sources */,
 				A259805724EF6B6200878A99 /* UserInfo.m in Sources */,
@@ -802,6 +972,7 @@
 				A2597FA624EF5DAD00878A99 /* AppDelegate.m in Sources */,
 				A259804B24EF6B6200878A99 /* HQIndexBannerSubview.m in Sources */,
 				A2597FB724EF5DAE00878A99 /* main.m in Sources */,
+				A255430524F4A4900012C406 /* LoginViewController.m in Sources */,
 				A259800D24EF6ACA00878A99 /* XSFWebViewController.m in Sources */,
 				A259804E24EF6B6200878A99 /* UICollectionView+Cell.m in Sources */,
 				A259805824EF6B6200878A99 /* UserInfoModel.m in Sources */,
@@ -968,6 +1139,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT6VFF8ZHB;
 				GCC_PREFIX_HEADER = sweatHeart/PrefixHeader.pch;
 				INFOPLIST_FILE = sweatHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -987,6 +1159,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT6VFF8ZHB;
 				GCC_PREFIX_HEADER = sweatHeart/PrefixHeader.pch;
 				INFOPLIST_FILE = sweatHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

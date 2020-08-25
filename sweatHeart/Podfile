@@ -8,7 +8,7 @@ target 'sweatHeart' do
   # Pods for sweatHeart
   pod 'MJRefresh'
   pod 'SDWebImage', '~> 4.0'
-  pod 'MBProgressHUD'
+  pod 'MBProgressHUD', '~> 1.1.0'
   pod 'IQKeyboardManager'
   pod 'Masonry'
   pod 'MJExtension'

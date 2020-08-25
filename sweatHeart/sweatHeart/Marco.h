@@ -60,7 +60,7 @@
 #define CONVENTION @"@#A@$@GRR4523a!sweMYqwe31JKV*%%"
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-#define APP_COLOR [UIColor colorWithRGB:0x344EFF]
+#define APP_COLOR [UIColor colorWithRGB:0xFFFFFF]
 #define AUTOSIZE_HEIGHT(value) value*SCREEN_WIDTH/375.f
 
 #define IS_IPHONE_X [self isIphoneX]

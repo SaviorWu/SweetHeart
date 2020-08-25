@@ -21,7 +21,7 @@ PODS:
   - JXCategoryView (1.5.6)
   - JXPagingView/Pager (2.0.12)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.2.0)
+  - MBProgressHUD (1.1.0)
   - MJExtension (3.2.2)
   - MJRefresh (3.5.0)
   - SDWebImage (4.4.8):
@@ -42,7 +42,7 @@ DEPENDENCIES:
   - JXCategoryView
   - JXPagingView/Pager
   - Masonry
-  - MBProgressHUD
+  - MBProgressHUD (~> 1.1.0)
   - MJExtension
   - MJRefresh
   - SDWebImage (~> 4.0)
@@ -73,13 +73,13 @@ SPEC CHECKSUMS:
   JXCategoryView: 603ccd8277a89b1a73e9cedb9d8ed4b294576008
   JXPagingView: 8271bfc6b380ccaf7af8c3075ab162245e96a4c9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: d70332d928b663181824b75b44ac855e24935d7b
+PODFILE CHECKSUM: 3b82dbadce0f31f48d19b21a8510e12d4bada0c4
 
 COCOAPODS: 1.9.1

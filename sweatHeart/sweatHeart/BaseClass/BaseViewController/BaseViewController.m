@@ -30,7 +30,7 @@
     self.btnBack.hidden = bHidden;
 }
 - (void)clickBack{
-    [self.navigationController popViewController];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)addNavigationView{
     self.vwNavigation = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_HEIGHT + STATUS_BAR_HEIGHT)];
@@ -41,15 +41,19 @@
     [lbTitle sizeToFit];
     lbTitle.bottom = self.vwNavigation.bottom - 11.f;
     lbTitle.centerX = SCREEN_WIDTH/2.f;
-    lbTitle.textColor = [UIColor whiteColor];
+    lbTitle.textColor = [UIColor blackColor];
     
-    self.btnBack = [[UIButton alloc] initWithFrame:CGRectMake(16, 0, 10, 18)];
+    self.btnBack = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [self.btnBack setEnlargeEdgeWithTop:10 right:20 bottom:10 left:20];
-    [self.btnBack setImage:[UIImage imageNamed:@"nav_btn_w_back"] forState:UIControlStateNormal];
+    [self.btnBack setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
     [self.btnBack addTarget:self action:@selector(clickBack) forControlEvents:UIControlEventTouchUpInside];
     self.btnBack.centerY = lbTitle.centerY;
     [self.vwNavigation addSubview:self.btnBack];
     [self.vwNavigation addSubview:lbTitle];
+    
+    UIView* vwLine = [[UIView alloc] initWithFrame:CGRectMake(0, self.vwNavigation.height - 1, SCREEN_WIDTH, 0.5)];
+    vwLine.backgroundColor = [UIColor colorWithRGB:0xE0E0E0];
+    [self.vwNavigation addSubview:vwLine];
     [self.view addSubview:self.vwNavigation];
 }
 - (void)viewDidLoad {

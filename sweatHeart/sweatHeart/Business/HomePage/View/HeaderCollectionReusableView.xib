@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="5w0-Vu-SH6">
+                    <rect key="frame" x="10" y="7" width="37" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="72j-Fw-ppW"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="igT-Qe-auL"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="kko-eI-8eY"/>
+                        <constraint firstAttribute="height" constant="36" id="meq-d9-Uzg"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择想玩的游戏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC8-fP-dTR">
+                    <rect key="frame" x="54" y="14.5" width="128.5" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="BC8-fP-dTR" firstAttribute="centerY" secondItem="5w0-Vu-SH6" secondAttribute="centerY" id="7Xq-kd-xRM"/>
+                <constraint firstItem="5w0-Vu-SH6" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="POh-sF-2Lu"/>
+                <constraint firstItem="5w0-Vu-SH6" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="7" id="Tqy-Jn-kgM"/>
+                <constraint firstItem="BC8-fP-dTR" firstAttribute="leading" secondItem="5w0-Vu-SH6" secondAttribute="trailing" constant="7" id="b1H-2W-YWg"/>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="bottom" secondItem="5w0-Vu-SH6" secondAttribute="bottom" constant="7" id="g3N-y8-3rp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <connections>
+                <outlet property="imgIcon" destination="5w0-Vu-SH6" id="mgn-eD-7n9"/>
+                <outlet property="lbTitle" destination="BC8-fP-dTR" id="gH3-hY-Vna"/>
+            </connections>
+            <point key="canvasLocation" x="-126" y="95"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="test" width="24" height="24"/>
+    </resources>
+</document>

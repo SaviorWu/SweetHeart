@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIViewController+HUD.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseViewController : UIViewController
