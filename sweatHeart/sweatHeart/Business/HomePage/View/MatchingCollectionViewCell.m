@@ -13,6 +13,15 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+//    self.layer.masksToBounds = YES;
+//    self.layer.cornerRadius = 10;
+    self.backView.layer.masksToBounds = YES;
+    self.backView.layer.cornerRadius = 17;
+}
+- (IBAction)clickBtn:(id)sender {
+    if (self.block) {
+        self.block();
+    }
 }
 
 @end

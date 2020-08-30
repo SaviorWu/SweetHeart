@@ -29,8 +29,16 @@
 - (void)hiddenBackBtn:(BOOL)bHidden{
     self.btnBack.hidden = bHidden;
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (self.navigationController.viewControllers.count == 1) {
+        self.tabBarController.tabBar.hidden = NO;
+    } else {
+        self.tabBarController.tabBar.hidden = YES;
+    }
+}
 - (void)clickBack{
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popViewController];
 }
 - (void)addNavigationView{
     self.vwNavigation = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_HEIGHT + STATUS_BAR_HEIGHT)];
@@ -45,7 +53,7 @@
     
     self.btnBack = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [self.btnBack setEnlargeEdgeWithTop:10 right:20 bottom:10 left:20];
-    [self.btnBack setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
+    [self.btnBack setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     [self.btnBack addTarget:self action:@selector(clickBack) forControlEvents:UIControlEventTouchUpInside];
     self.btnBack.centerY = lbTitle.centerY;
     [self.vwNavigation addSubview:self.btnBack];

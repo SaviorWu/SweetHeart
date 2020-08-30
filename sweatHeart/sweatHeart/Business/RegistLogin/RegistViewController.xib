@@ -57,8 +57,11 @@
                     <rect key="frame" x="20" y="201" width="374" height="50"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-Cb-Hz6">
-                            <rect key="frame" x="0.0" y="20" width="374" height="14"/>
+                            <rect key="frame" x="0.0" y="8" width="374" height="42"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="ySD-o6-7f5"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                         </textField>
@@ -79,15 +82,26 @@
                         <constraint firstItem="21e-56-vWs" firstAttribute="leading" secondItem="1zd-Ea-tux" secondAttribute="leading" id="d9G-VB-bSH"/>
                         <constraint firstItem="21e-56-vWs" firstAttribute="top" secondItem="8qV-Cb-Hz6" secondAttribute="bottom" constant="15" id="gzS-d3-sNT"/>
                         <constraint firstItem="8qV-Cb-Hz6" firstAttribute="leading" secondItem="1zd-Ea-tux" secondAttribute="leading" id="i7T-9I-Sl5"/>
+                        <constraint firstItem="8qV-Cb-Hz6" firstAttribute="top" secondItem="1zd-Ea-tux" secondAttribute="top" constant="8" id="iUq-yu-r5K"/>
                         <constraint firstItem="8qV-Cb-Hz6" firstAttribute="top" secondItem="1zd-Ea-tux" secondAttribute="top" constant="20" id="tum-SX-GGa"/>
+                        <constraint firstAttribute="bottom" secondItem="8qV-Cb-Hz6" secondAttribute="bottom" id="ugp-1D-SEe"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="tum-SX-GGa"/>
+                            <exclude reference="gzS-d3-sNT"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Otb-rt-Gfn">
                     <rect key="frame" x="20" y="259" width="374" height="50"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-vh-9xl">
-                            <rect key="frame" x="0.0" y="20" width="277" height="14"/>
+                            <rect key="frame" x="0.0" y="8" width="277" height="39"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="39" id="evk-XG-czV"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
@@ -124,15 +138,26 @@
                         <constraint firstItem="tX6-0K-snd" firstAttribute="top" secondItem="5nn-vh-9xl" secondAttribute="bottom" constant="15" id="b8i-oE-sdI"/>
                         <constraint firstItem="tX6-0K-snd" firstAttribute="top" secondItem="Cfu-H6-xKY" secondAttribute="bottom" constant="2" id="cal-ch-Kjl"/>
                         <constraint firstItem="5nn-vh-9xl" firstAttribute="top" secondItem="Otb-rt-Gfn" secondAttribute="top" constant="20" id="ega-sY-ZFL"/>
+                        <constraint firstItem="5nn-vh-9xl" firstAttribute="top" secondItem="Otb-rt-Gfn" secondAttribute="top" constant="8" id="iiv-hw-GjE"/>
                         <constraint firstAttribute="height" constant="50" id="kVN-Qn-ce8"/>
+                        <constraint firstItem="tX6-0K-snd" firstAttribute="top" secondItem="5nn-vh-9xl" secondAttribute="bottom" constant="2" id="qAg-Sw-E8o"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ega-sY-ZFL"/>
+                            <exclude reference="b8i-oE-sdI"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6k-tn-faL">
                     <rect key="frame" x="20" y="317" width="374" height="50"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请设置密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nIK-dm-yNJ">
-                            <rect key="frame" x="0.0" y="20" width="374" height="14"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="GpZ-6M-XJ0"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
                         </textField>
@@ -146,8 +171,10 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="nIK-dm-yNJ" firstAttribute="top" secondItem="a6k-tn-faL" secondAttribute="top" id="Bgr-gx-vyr"/>
                         <constraint firstItem="nIK-dm-yNJ" firstAttribute="top" secondItem="a6k-tn-faL" secondAttribute="top" constant="20" id="HAy-QS-rdd"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="O4w-hR-YSN"/>
+                        <constraint firstAttribute="bottom" secondItem="nIK-dm-yNJ" secondAttribute="bottom" id="QxF-w6-VHB"/>
                         <constraint firstAttribute="trailing" secondItem="0v7-yq-vUg" secondAttribute="trailing" id="V3p-Dh-7LK"/>
                         <constraint firstItem="nIK-dm-yNJ" firstAttribute="leading" secondItem="a6k-tn-faL" secondAttribute="leading" id="ZBy-Un-6C1"/>
                         <constraint firstAttribute="trailing" secondItem="nIK-dm-yNJ" secondAttribute="trailing" id="aJ4-Ad-dzm"/>
@@ -159,6 +186,8 @@
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="O4w-hR-YSN"/>
+                            <exclude reference="HAy-QS-rdd"/>
+                            <exclude reference="iz9-Hf-Zb7"/>
                         </mask>
                     </variation>
                 </view>
@@ -166,8 +195,11 @@
                     <rect key="frame" x="20" y="375" width="374" height="50"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ku-UX-l8d">
-                            <rect key="frame" x="0.0" y="20" width="374" height="14"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Qzg-Ts-tvU"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
                         </textField>
@@ -181,12 +213,14 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="5ku-UX-l8d" firstAttribute="top" secondItem="Wes-8q-MWT" secondAttribute="top" id="195-Y9-Kc8"/>
                         <constraint firstItem="tKP-aU-a3r" firstAttribute="leading" secondItem="Wes-8q-MWT" secondAttribute="leading" id="6is-hc-agn"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="HBw-E9-9Md"/>
                         <constraint firstItem="5ku-UX-l8d" firstAttribute="leading" secondItem="Wes-8q-MWT" secondAttribute="leading" id="Xej-6Z-USu"/>
                         <constraint firstItem="tKP-aU-a3r" firstAttribute="top" secondItem="5ku-UX-l8d" secondAttribute="bottom" constant="15" id="Yob-4D-x9U"/>
                         <constraint firstAttribute="bottom" secondItem="tKP-aU-a3r" secondAttribute="bottom" id="dkN-4a-ghn"/>
                         <constraint firstAttribute="height" constant="50" id="eCM-ee-qd1"/>
+                        <constraint firstAttribute="bottom" secondItem="5ku-UX-l8d" secondAttribute="bottom" id="ji4-Om-DkN"/>
                         <constraint firstAttribute="trailing" secondItem="5ku-UX-l8d" secondAttribute="trailing" id="qC8-1h-5a1"/>
                         <constraint firstItem="5ku-UX-l8d" firstAttribute="top" secondItem="Wes-8q-MWT" secondAttribute="top" constant="20" id="sC5-Is-nyI"/>
                         <constraint firstAttribute="trailing" secondItem="tKP-aU-a3r" secondAttribute="trailing" id="wwR-Tv-SIT"/>
@@ -194,6 +228,8 @@
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="HBw-E9-9Md"/>
+                            <exclude reference="sC5-Is-nyI"/>
+                            <exclude reference="Yob-4D-x9U"/>
                         </mask>
                     </variation>
                 </view>
@@ -266,7 +302,7 @@
                 <constraint firstItem="c81-KO-lif" firstAttribute="top" secondItem="Fr2-Z3-TAy" secondAttribute="bottom" constant="64" id="w2x-E9-0kA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-1003" y="56"/>
+            <point key="canvasLocation" x="-1004.3478260869566" y="55.580357142857139"/>
         </view>
     </objects>
 </document>

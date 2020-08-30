@@ -19,6 +19,20 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4b-Zs-Kxp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backGirl" translatesAutoresizingMaskIntoConstraints="NO" id="LSl-9T-RaI">
+                                <rect key="frame" x="13" y="10" width="87" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="03k-Be-8rk"/>
+                                    <constraint firstAttribute="height" constant="25" id="mUa-BD-0K5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backBoy" translatesAutoresizingMaskIntoConstraints="NO" id="5gP-sW-8z8">
+                                <rect key="frame" x="109" y="10" width="88" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="YdO-o7-wBT"/>
+                                    <constraint firstAttribute="width" constant="88" id="jRa-na-8h6"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJV-U6-g4c">
                                 <rect key="frame" x="20" y="10" width="80" height="25"/>
                                 <constraints>
@@ -27,7 +41,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="小姐姐">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="clickGirl:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dbv-9Z-4rm"/>
@@ -40,20 +54,41 @@
                                     <constraint firstAttribute="width" constant="80" id="lks-XO-nhx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="小哥哥">
+                                <state key="normal" title="    小哥哥">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="clickBoy:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Trv-29-ZUU"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_male" translatesAutoresizingMaskIntoConstraints="NO" id="ANu-JS-pSA">
+                                <rect key="frame" x="123" y="10.5" width="10" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="JzM-oJ-QZL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_female" translatesAutoresizingMaskIntoConstraints="NO" id="zbF-ub-Z79">
+                                <rect key="frame" x="30" y="17.5" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="BJX-fP-h3V"/>
+                                    <constraint firstAttribute="height" constant="10" id="P7W-8C-abC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="zbF-ub-Z79" firstAttribute="centerY" secondItem="SJV-U6-g4c" secondAttribute="centerY" id="2JR-J4-8it"/>
+                            <constraint firstItem="5gP-sW-8z8" firstAttribute="centerY" secondItem="9G5-r5-g8Q" secondAttribute="centerY" id="40H-9h-Mey"/>
                             <constraint firstItem="9G5-r5-g8Q" firstAttribute="top" secondItem="A4b-Zs-Kxp" secondAttribute="top" constant="10" id="FfD-PA-ZDq"/>
+                            <constraint firstItem="zbF-ub-Z79" firstAttribute="centerX" secondItem="SJV-U6-g4c" secondAttribute="centerX" constant="-25" id="IVS-Oe-q1h"/>
                             <constraint firstAttribute="height" constant="40" id="JjK-T8-Kk9"/>
                             <constraint firstItem="9G5-r5-g8Q" firstAttribute="leading" secondItem="SJV-U6-g4c" secondAttribute="trailing" constant="8" id="Rp4-yG-R4e"/>
+                            <constraint firstItem="ANu-JS-pSA" firstAttribute="centerY" secondItem="9G5-r5-g8Q" secondAttribute="centerY" id="WL2-6M-asL"/>
+                            <constraint firstItem="LSl-9T-RaI" firstAttribute="centerX" secondItem="SJV-U6-g4c" secondAttribute="centerX" id="WPk-ln-g6g"/>
                             <constraint firstItem="SJV-U6-g4c" firstAttribute="leading" secondItem="A4b-Zs-Kxp" secondAttribute="leading" constant="20" id="eKc-e1-4lO"/>
+                            <constraint firstItem="LSl-9T-RaI" firstAttribute="centerY" secondItem="SJV-U6-g4c" secondAttribute="centerY" id="tMn-uz-zWa"/>
+                            <constraint firstItem="ANu-JS-pSA" firstAttribute="centerX" secondItem="9G5-r5-g8Q" secondAttribute="centerX" constant="-20" id="uz3-tK-VwJ"/>
+                            <constraint firstItem="5gP-sW-8z8" firstAttribute="centerX" secondItem="9G5-r5-g8Q" secondAttribute="centerX" constant="5" id="viq-uG-U8G"/>
                             <constraint firstItem="SJV-U6-g4c" firstAttribute="top" secondItem="A4b-Zs-Kxp" secondAttribute="top" constant="10" id="vwv-b6-6GI"/>
                         </constraints>
                     </view>
@@ -123,8 +158,16 @@
                 <outlet property="btnGirl" destination="SJV-U6-g4c" id="Kkd-gc-aqc"/>
                 <outlet property="btnPause" destination="Aqc-0k-bhO" id="dJg-Ph-M1i"/>
                 <outlet property="btnStart" destination="y4f-OB-NoM" id="LHQ-iZ-dGU"/>
+                <outlet property="imageBoyBack" destination="5gP-sW-8z8" id="0aG-Nl-2K3"/>
+                <outlet property="imageGirlBack" destination="LSl-9T-RaI" id="EQf-55-pUp"/>
             </connections>
             <point key="canvasLocation" x="-231.15942028985509" y="160.37946428571428"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="backBoy" width="20" height="20"/>
+        <image name="backGirl" width="20" height="20"/>
+        <image name="icon_female" width="21" height="21"/>
+        <image name="icon_male" width="23" height="24"/>
+    </resources>
 </document>

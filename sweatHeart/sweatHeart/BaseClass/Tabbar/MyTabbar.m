@@ -47,23 +47,23 @@
 
 - (NSArray *)tabBarItemsAttributes {
     NSDictionary * tabBarItem1Attribute = @{CYLTabBarItemTitle : @"首页",
-                                            CYLTabBarItemImage : @"tab_home_n_icon",
-                                            CYLTabBarItemSelectedImage : @"tab_home_s_icon",
+                                            CYLTabBarItemImage : @"homepage_unselect",
+                                            CYLTabBarItemSelectedImage : @"homepage_select",
     };
     NSDictionary * tabBarItem2Attribute = @{
         CYLTabBarItemTitle : @"消息",
-        CYLTabBarItemImage : @"tab_mypage_n_icon",
-        CYLTabBarItemSelectedImage : @"tab_mypage_s_icon"
+        CYLTabBarItemImage : @"message_unselect",
+        CYLTabBarItemSelectedImage : @"message_select"
     };
     NSDictionary * tabBarItem3Attribute = @{
         CYLTabBarItemTitle : @"订单",
-        CYLTabBarItemImage : @"tab_mypage_n_icon",
-        CYLTabBarItemSelectedImage : @"tab_mypage_s_icon"
+        CYLTabBarItemImage : @"message_unselect",
+        CYLTabBarItemSelectedImage : @"message_select"
     };
     NSDictionary * tabBarItem4Attribute = @{
         CYLTabBarItemTitle : @"我的",
-        CYLTabBarItemImage : @"tab_mypage_n_icon",
-        CYLTabBarItemSelectedImage : @"tab_mypage_s_icon"
+        CYLTabBarItemImage : @"personalcenter_unselect",
+        CYLTabBarItemSelectedImage : @"personalcenter_select"
     };
     NSArray * tarBarItemsAttrbutes = @[tabBarItem1Attribute,
                                        tabBarItem2Attribute,
@@ -85,7 +85,7 @@
     // set the text color for selected state
     // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = APP_COLOR;
+    selectedAttrs[NSForegroundColorAttributeName] = BLUE_LEFT;
     
     // set the text Attributes
     // 设置文字属性

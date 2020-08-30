@@ -30,4 +30,8 @@
 #import "NetworkRequest.h"
 #import "UserInfo.h"
 #import "PublicTool.h"
+#import "MZTableView+Cell.h"
+#import "ImageView+Loading.h"
+#import "UIColor+IHGradientChange.h"
+#import "AppDelegate.h"
 #endif /* PrefixHeader_pch */

@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) UIWindow * window;
 - (void)showHomePage;
+- (void)showLoginPage;
 @end
 

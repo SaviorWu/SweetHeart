@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (PublicTool*)sharedInstance;
 + (NSString*)checkTextFeild:(UITextField*)tf;
 + (BOOL)judgePassWord:(NSString *)pass;
++ (NSString *)base64EncodeString:(NSString *)string;
 @end
 
 NS_ASSUME_NONNULL_END

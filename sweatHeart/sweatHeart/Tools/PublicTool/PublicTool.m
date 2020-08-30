@@ -17,6 +17,12 @@
     });
     return sharedInstance;
 }
++(NSString *)base64EncodeString:(NSString *)string{
+    //1、先转换成二进制数据
+    NSData *data =[string dataUsingEncoding:NSUTF8StringEncoding];
+    //2、对二进制数据进行base64编码，完成后返回字符串
+    return [data base64EncodedStringWithOptions:0];
+}
 + (BOOL)judgePassWord:(NSString *)pass{
     BOOL result = false;
     if ([pass length] >= 8){

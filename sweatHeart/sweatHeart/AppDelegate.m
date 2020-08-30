@@ -19,13 +19,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    LoginViewController* login = [[LoginViewController alloc] init];
-    UINavigationController * homePageNavigationController = [[UINavigationController alloc] initWithRootViewController:login];
     
-    self.window.rootViewController = homePageNavigationController;
-//    [self showHomePage];
+    NSUserDefaults* userdefault = [NSUserDefaults standardUserDefaults];
+    [UserInfo shareInstance].userModel.token = [userdefault objectForKey:@"token"];
+    [UserInfo shareInstance].userModel.uid = [userdefault objectForKey:@"uid"];
+    if ([UserInfo shareInstance].userModel.token.length == 0 ||
+        [UserInfo shareInstance].userModel.uid.length == 0) {
+        [self showLoginPage];
+    }
+    else{
+        [self showHomePage];
+    }
+    
     [self configIQKeyboard];
     return YES;
+}
+- (void)showLoginPage
+{
+    LoginViewController* login = [[LoginViewController alloc] init];
+    UINavigationController * loginPageNavigationController = [[UINavigationController alloc] initWithRootViewController:login];
+    self.window.rootViewController = loginPageNavigationController;
 }
 - (void)showHomePage{
     MyTabbar * TabBarControllerConfig = [[MyTabbar alloc] init];

@@ -102,7 +102,7 @@ NSDictionary *const API(NSDictionary *parameter,NSString * _Nonnull methodName){
 
 ///请求结果
 + (BOOL)checkRequestSucceed:(NetWorkResponseModel*)responseMode{
-    if([responseMode.code integerValue] == 0)
+    if([responseMode.code integerValue] == 1)
         return YES;
     else
         return NO;

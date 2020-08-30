@@ -14,6 +14,8 @@
 @interface HomePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,assign) NSInteger selectIdx;
+@property (nonatomic,assign) NSInteger selectSex;
+@property (nonatomic,strong) NSMutableArray* arrayItems;
 @end
 
 @implementation HomePageViewController
@@ -25,6 +27,52 @@
     [self addNavigationView];
     self.title = @"首页";
     [self hiddenBackBtn:YES];
+    self.selectSex = 1;
+    self.selectIdx = -1;
+    self.arrayItems = [[NSMutableArray alloc] init];
+    {
+        NSMutableDictionary* dic = [[NSMutableDictionary alloc] init];
+        [dic setObject:@"close1frm_pic2j" forKey:@"image"];
+        [dic setObject:@"王者荣耀" forKey:@"title"];
+        [dic setObject:@(YES) forKey:@"op"];
+        [self.arrayItems addObject:dic];
+    }
+    {
+        NSMutableDictionary* dic = [[NSMutableDictionary alloc] init];
+        [dic setObject:@"close1frm_pic3" forKey:@"image"];
+        [dic setObject:@"和平精英" forKey:@"title"];
+        [dic setObject:@(YES) forKey:@"op"];
+        [self.arrayItems addObject:dic];
+    }
+    {
+        NSMutableDictionary* dic = [[NSMutableDictionary alloc] init];
+        [dic setObject:@"close1frm_wz" forKey:@"image"];
+        [dic setObject:@"英雄联盟" forKey:@"title"];
+        [dic setObject:@(YES) forKey:@"op"];
+        [self.arrayItems addObject:dic];
+    }
+    {
+        NSMutableDictionary* dic = [[NSMutableDictionary alloc] init];
+        [dic setObject:@"close1frm_cj" forKey:@"image"];
+        [dic setObject:@"绝地求生" forKey:@"title"];
+        [dic setObject:@(YES) forKey:@"op"];
+        [self.arrayItems addObject:dic];
+    }
+    {
+        NSMutableDictionary* dic = [[NSMutableDictionary alloc] init];
+        [dic setObject:@"yuyinliao" forKey:@"image"];
+        [dic setObject:@"语音聊天" forKey:@"title"];
+        [dic setObject:@(YES) forKey:@"op"];
+        [self.arrayItems addObject:dic];
+    }
+    {
+        NSMutableDictionary* dic = [[NSMutableDictionary alloc] init];
+        [dic setObject:@" " forKey:@"image"];
+        [dic setObject:@" " forKey:@"title"];
+        [dic setObject:@(NO) forKey:@"op"];
+        [self.arrayItems addObject:dic];
+    }
+    
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView LoadCell:@"MatchingCollectionViewCell"];
@@ -37,21 +85,19 @@
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 0;
     self.collectionView.collectionViewLayout = layout;
-    [self addRefreshLoading];
-    
-    [self.collectionView.mj_header beginRefreshing];
+//    [self addRefreshLoading];
 }
-- (void)addRefreshLoading{
-    @weakify(self);
-    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        @strongify(self);
-        [self loadData];
-    }];
-    self.collectionView.mj_footer.hidden = YES;
-}
-- (void)loadData{
-    [self.collectionView.mj_header endRefreshing];
-}
+//- (void)addRefreshLoading{
+//    @weakify(self);
+//    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//        @strongify(self);
+//        [self loadData];
+//    }];
+//    self.collectionView.mj_footer.hidden = YES;
+//}
+//- (void)loadData{
+//
+//}
 /*
 #pragma mark - Navigation
 
@@ -66,7 +112,10 @@
 {
     return 2;
 }
-
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, 0, 0, 0);//分别为上、左、下、右
+}
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     CGSize size={SCREEN_WIDTH,60};
     return size;
@@ -74,9 +123,10 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     HeaderCollectionReusableView* view = [collectionView reUseCell:@"HeaderCollectionReusableView" forIndexPath:indexPath];
     if (indexPath.section == 0) {
-//        [view.imgIcon setImage:[UIImage imageNamed:@""]];
+        [view.imgIcon setImage:[UIImage imageNamed:@"chose1frm_pic1"]];
         view.lbTitle.text = @"选择想玩的游戏";
     }else{
+        [view.imgIcon setImage:[UIImage imageNamed:@"close1frm_head"]];
         view.lbTitle.text = @"选择陪玩的性别";
     }
     return view;
@@ -91,35 +141,65 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 0)
-        return CGSizeMake(SCREEN_WIDTH/3,60);
+        return CGSizeMake(SCREEN_WIDTH/3,50);
     else
         return CGSizeMake(SCREEN_WIDTH,150);
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
         MatchingCollectionViewCell* cell = [collectionView reUseCell:@"MatchingCollectionViewCell" forIndexPath:indexPath];
-        cell.userInteractionEnabled = YES;
+        
+        cell.block = ^{
+            if ([self.arrayItems[indexPath.row][@"op"] boolValue] != YES) {
+                return;
+            }
+            self.selectIdx = indexPath.row;
+            [self.collectionView reloadData];
+        };
         if (self.selectIdx == indexPath.row) {
-            cell.backgroundColor = [UIColor blueColor];
+            cell.lbTitle.textColor = [UIColor whiteColor];
+            cell.backView.backgroundColor = [UIColor bm_colorGradientChangeWithSize:cell.backView.size direction:IHGradientChangeDirectionLevel startColor:BLUE_LEFT endColor:BLUE_RIGHT];
         }
         else{
-            cell.backgroundColor = [UIColor clearColor];
+            cell.lbTitle.textColor = [UIColor blackColor];
+            cell.backView.backgroundColor = [UIColor whiteColor];
         }
+        cell.lbTitle.text = self.arrayItems[indexPath.row][@"title"];
+        [cell.imgIcon setImage:[UIImage imageNamed:self.arrayItems[indexPath.row][@"image"]]];
         return cell;
     }else{
         StartMatchingCollectionViewCell* cell = [collectionView reUseCell:@"StartMatchingCollectionViewCell" forIndexPath:indexPath];
         cell.matchBlock = ^{
-            self.tabBarController.selectedIndex = 1;
+            if (self.selectIdx == -1) {
+                [self showHint:@"请选择您想玩的游戏"];
+                [self.collectionView.mj_header endRefreshing];
+                return;
+            }
+            [NetworkRequest GET:@"/app/Yindao/kepipei"
+                     parameters:@{@"token":[UserInfo shareInstance].userModel.token,
+                                  @"sex":@(self.selectSex),
+                                  @"game":@(self.selectIdx + 1)
+                     }
+                        success:^(NetWorkResponseModel * _Nullable responseModel) {
+                [self.collectionView.mj_header endRefreshing];
+                self.tabBarController.selectedIndex = 1;
+            } failure:^(NSError * _Nullable error, NetWorkResponseModel * _Nullable responseModel) {
+                [self.collectionView.mj_header endRefreshing];
+                if ([responseModel.code integerValue] == -2) {
+                    [self showHint:@"账号在其他设备登录"];
+                    [UserInfo userLogout];
+                }
+            }];
+        };
+        cell.clickboy = ^{
+            self.selectSex = 2;
+        };
+        cell.clickGirl = ^{
+            self.selectSex = 1;
         };
         return cell;
     }
 }
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(indexPath.section == 0){
-        self.selectIdx = indexPath.row;
-        [self.collectionView reloadData];
-    }
-}
+
 
 @end

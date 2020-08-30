@@ -12,26 +12,30 @@
 @implementation UINavigationController(pushAnimotion)
 
 - (void)pushViewController:(UIViewController *)viewController{
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.4f;
-    transition.type = kCATransitionMoveIn;
-    transition.subtype = kCATransitionFromRight;
-    [self.view.layer addAnimation:transition forKey:kCATransition];
+//    viewController.view.backgroundColor = [UIColor whiteColor];
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = 0.4f;
+//    transition.type = kCATransitionMoveIn;
+//    transition.subtype = kCATransitionFromRight;
+//    [self.view.layer addAnimation:transition forKey:kCATransition];
+    
     if (self.viewControllers.count > 0) {
-        viewController.hidesBottomBarWhenPushed = YES;
+        self.tabBarController.tabBar.hidden = YES;
+//        viewController.hidesBottomBarWhenPushed = YES;
     } else {
-        viewController.hidesBottomBarWhenPushed = NO;
+        self.tabBarController.tabBar.hidden = NO;
+//        viewController.hidesBottomBarWhenPushed = NO;
     }
-    [self pushViewController:viewController animated:NO];
+    [self pushViewController:viewController animated:YES];
 }
 - (void)popViewController{
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.4f;
-    transition.type = kCATransitionReveal;
-    transition.subtype = kCATransitionFromLeft;
-    [self.view.layer addAnimation:transition forKey:kCATransition];
-    [self popViewControllerAnimated:NO];
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = 0.4f;
+//    transition.type = kCATransitionReveal;
+//    transition.subtype = kCATransitionFromLeft;
+//    [self.view.layer addAnimation:transition forKey:kCATransition];
+    
+    [self popViewControllerAnimated:YES];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ForgetPasswordViewController.h"
-
+#import "AppDelegate.h"
 @interface ForgetPasswordViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnReset;
 @property (weak, nonatomic) IBOutlet UIButton *btnCheckCode;
@@ -59,13 +59,25 @@
     [self addNavigationView];
     self.btnReset.layer.masksToBounds = YES;
     self.btnReset.layer.cornerRadius = 25;
+    self.btnReset.backgroundColor = [UIColor bm_colorGradientChangeWithSize:self.btnReset.size direction:IHGradientChangeDirectionLevel startColor:BLUE_LEFT endColor:BLUE_RIGHT];
 }
 - (IBAction)clickCheckCode:(id)sender {
     if (self.tfPhoneNumber.text.length == 0) {
         [self showHint:@"请输入手机号码"];
     }else{
-        self.count = 60;
-        [self startimer];
+        [self showHudInView:self.view];
+        [NetworkRequest GET:@"/app/userverify/sendVirefy"
+                 parameters:@{@"mobile":self.tfPhoneNumber.text,
+                              @"type":@"forget"
+                 }
+                    success:^(NetWorkResponseModel * _Nullable responseModel) {
+            [self hideAllHudFromSuperView:self.view];
+            self.count = 60;
+            [self startimer];
+        } failure:^(NSError * _Nullable error, NetWorkResponseModel * _Nullable responseModel) {
+            [self hideAllHudFromSuperView:self.view];
+            [self showHint:responseModel.msg];
+        }];
     }
 }
 - (IBAction)clickReset:(id)sender {
@@ -79,6 +91,29 @@
         [self showHint:@"密码格式不正确"];
     }else{
         
+        [self showHudInView:self.view];
+        [NetworkRequest GET:@"/app/users/find_password"
+                 parameters:@{@"mobile":self.tfPhoneNumber.text,
+                              @"password":[PublicTool base64EncodeString:self.tfPswd.text],
+                              @"verify":self.tfCheckCode.text}
+                    success:^(NetWorkResponseModel * _Nullable responseModel) {
+            [self hideAllHudFromSuperView:self.view];
+            [self showHint:responseModel.msg];
+            
+            [UserInfo shareInstance].userModel = [UserInfoModel modelWithJSON:responseModel.data[@"info"]];
+            [UserInfo shareInstance].userModel.token = responseModel.data[@"token"];
+            
+            NSUserDefaults* userdefault = [NSUserDefaults standardUserDefaults];
+            [userdefault setObject:[UserInfo shareInstance].userModel.token forKey:@"token"];
+            [userdefault setObject:[UserInfo shareInstance].userModel.uid forKey:@"uid"];
+            [userdefault synchronize];
+            
+            [((AppDelegate *)([UIApplication sharedApplication].delegate)) showHomePage];
+            
+        } failure:^(NSError * _Nullable error, NetWorkResponseModel * _Nullable responseModel) {
+            [self hideAllHudFromSuperView:self.view];
+            [self showHint:responseModel.msg];
+        }];
     }
 }
 
